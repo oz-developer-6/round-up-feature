@@ -37,4 +37,25 @@ http://localhost:5068/swagger/index.html
 
 Alternatively we can send HttpRequests via following curl command:
 
-`curl -X 'GET' 'http://localhost:5068/RoundUp'`
+`curl -X 'GET' \
+  'http://localhost:5068/RoundUp?weekCommencingInput=2022%2F05%2F21d' \
+  -H 'accept: */*''`
+
+  ## Get/RoundUp
+  
+  This endpoint will accept a valid dateTime string in one of the following formats
+  `YYYY/MM/DD` or `yyyy-MM-ddTHH:mm:ss.000Z`
+
+  Once a valid date format is entered, this will act as a starting day of the week and application will apply round up calculation to all out transactions on the primary account.
+
+  If user has a savingsGoal account total of the round-up amount from all transactions in the given period will be added to their savingsGoal account.
+
+  If user does not have a savingsGoal account a new one with the name `Holiday Savings` with target value of `£185.00`, and total round-up value will be added to this new savingsGoal account.
+
+  After a successful amount transfer, endpoint will return a success message with accountUid. We can use this accountUid to check our savingsGoal accounts via the below endpoint
+
+  ## Get/RoundUp/SavingsGoals
+
+  This endpoint will display `name`, `target amount`, `totalSaved amount` and `savedPercentage` information for the users all savingsAccount.
+
+  We will need the `accountUid` to invoke this enpoint, which can be retrieved from the result of the above endpoint request call.
