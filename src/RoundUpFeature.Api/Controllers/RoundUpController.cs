@@ -50,7 +50,7 @@ public class RoundUpController : ControllerBase
             savingsGoal = await _roundUpService.CreateSavingGoalsAccountAsync(accountUid, "Holiday Savings", 18500);
         }
 
-        var success = await _roundUpService.AddAmountToSavingGoalAsync(amountToTransferSavingGoalInMinorUnits, accountUid, savingsGoal.SavingsGoalUId);
+        var success = await _roundUpService.AddAmountToSavingsGoalAsync(amountToTransferSavingGoalInMinorUnits, accountUid, savingsGoal.SavingsGoalUId);
         if (!success)
         {
             return Problem("Could not add the amount to savings goal account");

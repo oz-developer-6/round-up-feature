@@ -11,10 +11,10 @@ public class RoundUp : IRoundUp
     private readonly IStarlingService _starlingService;
 
     public RoundUp(ILogger<RoundUp> logger,
-        IStarlingService apiClient)
+        IStarlingService starlingService)
     {
         _logger = logger;
-        _starlingService = apiClient;
+        _starlingService = starlingService;
     }
     
     public async Task<IEnumerable<SavingsGoal>> GetAllSavingsGoalsAsync(string accountUid)
@@ -71,7 +71,7 @@ public class RoundUp : IRoundUp
         return amountToTransferSavingGoalInMinorUnits;
     }
 
-    public async Task<bool> AddAmountToSavingGoalAsync(decimal amount, string accountUid, string savingsGoalUid)
+    public async Task<bool> AddAmountToSavingsGoalAsync(decimal amount, string accountUid, string savingsGoalUid)
     {
         var amountToSend = new Amount
         {
