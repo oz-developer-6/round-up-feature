@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8E23F751-F14
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoundUpFeature.Api", "src\RoundUpFeature.Api\RoundUpFeature.Api.csproj", "{D645DBD2-7AEB-439C-AB23-9022CE13F716}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3C5602CD-8A48-4518-97CB-2B2BEBB97998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoundUpFeature.Api.Test", "test\RoundUpFeature.Api.Test\RoundUpFeature.Api.Test.csproj", "{243BA0B4-1D1F-40F3-A2CE-006F9D94D221}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{D645DBD2-7AEB-439C-AB23-9022CE13F716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D645DBD2-7AEB-439C-AB23-9022CE13F716}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D645DBD2-7AEB-439C-AB23-9022CE13F716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243BA0B4-1D1F-40F3-A2CE-006F9D94D221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243BA0B4-1D1F-40F3-A2CE-006F9D94D221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243BA0B4-1D1F-40F3-A2CE-006F9D94D221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243BA0B4-1D1F-40F3-A2CE-006F9D94D221}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D645DBD2-7AEB-439C-AB23-9022CE13F716} = {8E23F751-F14C-48BF-A0AF-5150C2A5D02E}
+		{243BA0B4-1D1F-40F3-A2CE-006F9D94D221} = {3C5602CD-8A48-4518-97CB-2B2BEBB97998}
 	EndGlobalSection
 EndGlobal
