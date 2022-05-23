@@ -59,3 +59,8 @@ Alternatively we can send HttpRequests via following curl command:
   This endpoint will display `name`, `target amount`, `totalSaved amount` and `savedPercentage` information for the users all savingsAccount.
 
   We will need the `accountUid` to invoke this enpoint, which can be retrieved from the result of the above endpoint request call.
+
+  ## Running Unit Tests
+  
+  At the root of the project please run the following command
+  `dotnet test`
