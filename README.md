@@ -16,6 +16,10 @@ After the installation of dotnet 6 CLI, please verify the installation by runnin
 
 `dotnet --version`
 
+## Refresh Access Token
+
+Please refresh the Access Token in `program.cs` as auto refresh is not implemented in this MVP version.
+
 ## Build and Run the application
 
 At the root of the project, run the following command:
